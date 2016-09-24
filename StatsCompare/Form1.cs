@@ -12,7 +12,7 @@ namespace StatsCompare
         public Form1()
         {
             InitializeComponent();
-            
+            ReadWeightsFile();
         }
         
         private void SetWeights(Weight ClassWeight)
@@ -29,7 +29,16 @@ namespace StatsCompare
 
         public void ReadWeightsFile()
         {
-             
+            XmlDocument doc = new XmlDocument();
+            doc.Load(@"D:\Projects\StatsCompare\StatsCompare\Weights.xml");
+
+            //Display all the book titles.
+            XmlNodeList elemList = doc.GetElementsByTagName("Warlock");
+            for (int i = 0; i < elemList.Count; i++)
+            {
+                Console.WriteLine(elemList[i].InnerXml + Environment.NewLine);
+            }
+
         }
 
 
