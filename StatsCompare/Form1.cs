@@ -27,6 +27,15 @@ namespace StatsCompare
             ClassWeight.Mastery     = Convert.ToDouble(this.numMastery.Value);
         }
 
+        public void ReadWeightsFile()
+        {
+
+        }
+
+
+
+
+
         private void btnCompare_Click(object sender, EventArgs e)
         {
            
