@@ -1,12 +1,14 @@
 ﻿using System;
-using System.IO;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace StatsCompare
 {
     
     public partial class Form1 : Form
     {
+        Weight ClassWeight = new Weight();
+
         public Form1()
         {
             InitializeComponent();
@@ -27,8 +29,7 @@ namespace StatsCompare
 
         private void btnCompare_Click(object sender, EventArgs e)
         {
-            Weight ClassWeight = new Weight();
-
+           
             SetWeights(ClassWeight);
             
             Item ItemOne = new Item();
@@ -62,22 +63,28 @@ namespace StatsCompare
         private void btnSaveWeights_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFile = new SaveFileDialog();
-            saveFile.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            saveFile.Filter = "xml files (*.xml)|*.xml|All files (*.*)|*.*";
             saveFile.FilterIndex = 2;
             saveFile.RestoreDirectory = true;
             saveFile.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
-
-            StreamWriter myStream;
-
+            
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
-                if ((myStream = new StreamWriter(saveFile.OpenFile())) != null)
-                {
-                    // write stream data
-                    myStream.WriteLine("");
+                // Create the XmlDocument.
+                XmlDocument doc = new XmlDocument();
 
-                    myStream.Close();
-                }
+                doc.LoadXml("<Warlock> </Warlock>");
+                // Add a price element.
+                XmlElement newElem = doc.CreateElement("Destruction");
+
+                newElem.InnerText = "Intellect";
+                doc.DocumentElement.AppendChild(newElem);
+
+                // Save the document to a file. White space is
+                // preserved (no white space).
+                doc.PreserveWhitespace = true;
+                doc.Save(saveFile.FileName);
+                
             }
 
         }

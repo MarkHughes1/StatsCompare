@@ -10,3 +10,12 @@ c:\users\mahu\documents\visual studio 2015\Projects\StatsCompare\StatsCompare\ob
 D:\GoogleDrive\New Projects\StatsCompare\StatsCompare\bin\Debug\StatsCompare.exe.config
 D:\GoogleDrive\New Projects\StatsCompare\StatsCompare\obj\Debug\StatsCompare.exe
 D:\GoogleDrive\New Projects\StatsCompare\StatsCompare\obj\Debug\StatsCompare.pdb
+D:\Projects\StatsCompare\StatsCompare\bin\Debug\StatsCompare.exe.config
+D:\Projects\StatsCompare\StatsCompare\obj\Debug\StatsCompare.exe
+D:\Projects\StatsCompare\StatsCompare\obj\Debug\StatsCompare.pdb
+D:\Projects\StatsCompare\StatsCompare\obj\Debug\StatsCompare.csprojResolveAssemblyReference.cache
+D:\Projects\StatsCompare\StatsCompare\obj\Debug\StatsCompare.Form1.resources
+D:\Projects\StatsCompare\StatsCompare\obj\Debug\StatsCompare.Properties.Resources.resources
+D:\Projects\StatsCompare\StatsCompare\obj\Debug\StatsCompare.csproj.GenerateResource.Cache
+D:\Projects\StatsCompare\StatsCompare\bin\Debug\StatsCompare.exe
+D:\Projects\StatsCompare\StatsCompare\bin\Debug\StatsCompare.pdb

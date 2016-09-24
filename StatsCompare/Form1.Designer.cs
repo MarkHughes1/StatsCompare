@@ -82,7 +82,6 @@
             this.textScore1 = new System.Windows.Forms.TextBox();
             this.textScore2 = new System.Windows.Forms.TextBox();
             this.btnCompare = new System.Windows.Forms.Button();
-            this.btnSaveWeights = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMastery)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numVersatility)).BeginInit();
@@ -765,22 +764,11 @@
             this.btnCompare.UseVisualStyleBackColor = true;
             this.btnCompare.Click += new System.EventHandler(this.btnCompare_Click);
             // 
-            // btnSaveWeights
-            // 
-            this.btnSaveWeights.Location = new System.Drawing.Point(12, 260);
-            this.btnSaveWeights.Name = "btnSaveWeights";
-            this.btnSaveWeights.Size = new System.Drawing.Size(102, 23);
-            this.btnSaveWeights.TabIndex = 34;
-            this.btnSaveWeights.Text = "Save Weights";
-            this.btnSaveWeights.UseVisualStyleBackColor = true;
-            this.btnSaveWeights.Click += new System.EventHandler(this.btnSaveWeights_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(552, 339);
-            this.Controls.Add(this.btnSaveWeights);
             this.Controls.Add(this.btnCompare);
             this.Controls.Add(this.textScore2);
             this.Controls.Add(this.textScore1);
@@ -879,7 +867,6 @@
         private System.Windows.Forms.TextBox textScore1;
         private System.Windows.Forms.TextBox textScore2;
         private System.Windows.Forms.Button btnCompare;
-        private System.Windows.Forms.Button btnSaveWeights;
     }
 }
 
