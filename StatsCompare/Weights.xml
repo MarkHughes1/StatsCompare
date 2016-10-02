@@ -1,4 +1,4 @@
-
+<Class>
 <Warlock>
 	<Destruction>
 		<Intellect>1.0</Intellect>
@@ -10,4 +10,57 @@
 		<Agility>0.0</Agility>
 		<Strength>0.0</Strength>
 	</Destruction>
+	<Demonology>
+		<Intellect>1.0</Intellect>
+		<Haste>0.9</Haste>
+		<Crit>0.82</Crit>
+		<Versatility>0.70</Versatility>
+		<Mastery>0.66</Mastery>
+		<Stamina>0.0</Stamina>
+		<Agility>0.0</Agility>
+		<Strength>0.0</Strength>
+	</Demonology>
+	<Affliction>
+		<Intellect>1.0</Intellect>
+		<Haste>0.9</Haste>
+		<Crit>0.82</Crit>
+		<Versatility>0.70</Versatility>
+		<Mastery>0.66</Mastery>
+		<Stamina>0.0</Stamina>
+		<Agility>0.0</Agility>
+		<Strength>0.0</Strength>
+	</Affliction>
 </Warlock>
+<Warrior>
+	<Arms>
+		<Intellect>0.0</Intellect>
+		<Haste>0.0</Haste>
+		<Crit>0.0</Crit>
+		<Versatility>0.0</Versatility>
+		<Mastery>0.0</Mastery>
+		<Stamina>0.0</Stamina>
+		<Agility>0.0</Agility>
+		<Strength>0.0</Strength>
+	</Arms>
+	<Fury>
+		<Intellect>0.0</Intellect>
+		<Haste>0.0</Haste>
+		<Crit>0.0</Crit>
+		<Versatility>0.0</Versatility>
+		<Mastery>0.0</Mastery>
+		<Stamina>0.0</Stamina>
+		<Agility>0.0</Agility>
+		<Strength>0.0</Strength>
+	</Fury>
+	<Protection>
+		<Intellect>0.0</Intellect>
+		<Haste>0.0</Haste>
+		<Crit>0.0</Crit>
+		<Versatility>0.0</Versatility>
+		<Mastery>0.0</Mastery>
+		<Stamina>0.0</Stamina>
+		<Agility>0.0</Agility>
+		<Strength>0.0</Strength>
+	</Protection>
+</Warrior>
+</Class>

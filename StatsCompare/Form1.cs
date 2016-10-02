@@ -8,11 +8,13 @@ namespace StatsCompare
     public partial class Form1 : Form
     {
         Weight ClassWeight = new Weight();
+        XmlDocument doc = new XmlDocument();
 
         public Form1()
         {
             InitializeComponent();
             ReadWeightsFile();
+            ReadWeightsFileForMenuOptions();
         }
         
         private void SetWeights(Weight ClassWeight)
@@ -27,21 +29,44 @@ namespace StatsCompare
             ClassWeight.Mastery     = Convert.ToDouble(this.numMastery.Value);
         }
 
-        public void ReadWeightsFile()
+        private void ReadWeightsFileForMenuOptions()
         {
-            XmlDocument doc = new XmlDocument();
-            doc.Load(@"D:\Projects\StatsCompare\StatsCompare\Weights.xml");
-
-            //Display all the book titles.
-            XmlNodeList elemList = doc.GetElementsByTagName("Warlock");
-            for (int i = 0; i < elemList.Count; i++)
+            //var itemNodes = ;
+            var clNodes = doc.SelectNodes("Class");
+            foreach (XmlNode ClassNode in clNodes)
             {
-                Console.WriteLine(elemList[i].InnerXml + Environment.NewLine);
+                string ClassName = ClassNode.ChildNodes.ToString();
             }
-
         }
 
+        public void ReadWeightsFile()
+        {
+            doc.Load(@"D:\GitProjects\StatsCompare\StatsCompare\Weights.xml");
+        }
 
+        private void ReadClassAndSpecSpecificWeightData()
+        {
+            var clNodes = doc.SelectNodes("Class");
+            foreach (XmlNode ClassNode in clNodes)
+            {
+                var PlayerClass = doc.SelectNodes("Warlock");
+                foreach (XmlNode node in PlayerClass)
+                {
+                    var Specialization = node.SelectNodes("Destruction");
+                    foreach (XmlNode loc in Specialization)
+                    {
+                        ClassWeight.Intellect = Convert.ToDouble(loc.SelectSingleNode("Intellect").InnerText);
+                        ClassWeight.Strength = Convert.ToDouble(loc.SelectSingleNode("Strength").InnerText);
+                        ClassWeight.Stamina = Convert.ToDouble(loc.SelectSingleNode("Stamina").InnerText);
+                        ClassWeight.Agility = Convert.ToDouble(loc.SelectSingleNode("Agility").InnerText);
+                        ClassWeight.Haste = Convert.ToDouble(loc.SelectSingleNode("Haste").InnerText);
+                        ClassWeight.Crit = Convert.ToDouble(loc.SelectSingleNode("Crit").InnerText);
+                        ClassWeight.Versatility = Convert.ToDouble(loc.SelectSingleNode("Versatility").InnerText);
+                        ClassWeight.Mastery = Convert.ToDouble(loc.SelectSingleNode("Mastery").InnerText);
+                    }
+                }
+            }
+        }
 
 
 
@@ -104,6 +129,26 @@ namespace StatsCompare
                 doc.Save(saveFile.FileName);
                 
             }
+
+        }
+
+        private void classToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+              }
+
+        private void classToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+           
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+          
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string classSelection = this.comboBox1.SelectedItem.ToString();
 
         }
     }

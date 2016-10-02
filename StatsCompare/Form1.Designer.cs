@@ -82,6 +82,7 @@
             this.textScore1 = new System.Windows.Forms.TextBox();
             this.textScore2 = new System.Windows.Forms.TextBox();
             this.btnCompare = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numMastery)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numVersatility)).BeginInit();
@@ -201,7 +202,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 11);
+            this.groupBox2.Location = new System.Drawing.Point(11, 53);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(170, 245);
             this.groupBox2.TabIndex = 20;
@@ -370,7 +371,7 @@
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Location = new System.Drawing.Point(188, 13);
+            this.groupBox1.Location = new System.Drawing.Point(187, 55);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(170, 243);
             this.groupBox1.TabIndex = 29;
@@ -563,7 +564,7 @@
             this.groupBox3.Controls.Add(this.label25);
             this.groupBox3.Controls.Add(this.label26);
             this.groupBox3.Controls.Add(this.label27);
-            this.groupBox3.Location = new System.Drawing.Point(364, 13);
+            this.groupBox3.Location = new System.Drawing.Point(363, 55);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(170, 243);
             this.groupBox3.TabIndex = 30;
@@ -740,7 +741,7 @@
             // 
             // textScore1
             // 
-            this.textScore1.Location = new System.Drawing.Point(258, 262);
+            this.textScore1.Location = new System.Drawing.Point(257, 304);
             this.textScore1.Name = "textScore1";
             this.textScore1.ReadOnly = true;
             this.textScore1.Size = new System.Drawing.Size(100, 20);
@@ -748,7 +749,7 @@
             // 
             // textScore2
             // 
-            this.textScore2.Location = new System.Drawing.Point(434, 262);
+            this.textScore2.Location = new System.Drawing.Point(433, 304);
             this.textScore2.Name = "textScore2";
             this.textScore2.ReadOnly = true;
             this.textScore2.Size = new System.Drawing.Size(100, 20);
@@ -764,11 +765,26 @@
             this.btnCompare.UseVisualStyleBackColor = true;
             this.btnCompare.Click += new System.EventHandler(this.btnCompare_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Warlock",
+            "Warrior",
+            "Rogue",
+            "Paladin"});
+            this.comboBox1.Location = new System.Drawing.Point(104, 12);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 35;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(552, 339);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnCompare);
             this.Controls.Add(this.textScore2);
             this.Controls.Add(this.textScore1);
@@ -867,6 +883,7 @@
         private System.Windows.Forms.TextBox textScore1;
         private System.Windows.Forms.TextBox textScore2;
         private System.Windows.Forms.Button btnCompare;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
