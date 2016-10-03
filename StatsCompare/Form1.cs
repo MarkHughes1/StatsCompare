@@ -4,7 +4,6 @@ using System.Xml;
 
 namespace StatsCompare
 {
-    
     public partial class Form1 : Form
     {
         Weight ClassWeight = new Weight();
@@ -31,25 +30,19 @@ namespace StatsCompare
 
         private void ReadWeightsFileForMenuOptions()
         {
-            //var itemNodes = ;
             var clNodes = doc.SelectNodes("Class");
             foreach (XmlNode ClassNode in clNodes)
             {
                 foreach (XmlNode cla in ClassNode)
                 {
                     string ClassName = cla.Name.ToString();
-                 
                     this.comboBox1.Items.Add(ClassName);
-
-                   
+                    
                     foreach (XmlNode Spec in cla)
                     {
                         string SpecName = Spec.Name.ToString();
-                      
                         this.comboBox1.Items.Add("-> " + SpecName);
-
                     }
-
                 }
             }
         }
@@ -82,12 +75,9 @@ namespace StatsCompare
                 }
             }
         }
-
-
-
+        
         private void btnCompare_Click(object sender, EventArgs e)
         {
-           
             SetWeights(ClassWeight);
             
             Item ItemOne = new Item();
@@ -115,56 +105,11 @@ namespace StatsCompare
             
             textScore1.Text = ItemOne.GetScore().ToString();
             textScore2.Text = ItemTwo.GetScore().ToString();
-
         }
-
-        private void btnSaveWeights_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog saveFile = new SaveFileDialog();
-            saveFile.Filter = "xml files (*.xml)|*.xml|All files (*.*)|*.*";
-            saveFile.FilterIndex = 2;
-            saveFile.RestoreDirectory = true;
-            saveFile.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            
-            if (saveFile.ShowDialog() == DialogResult.OK)
-            {
-                // Create the XmlDocument.
-                XmlDocument doc = new XmlDocument();
-
-                doc.LoadXml("<Warlock> </Warlock>");
-                // Add a price element.
-                XmlElement newElem = doc.CreateElement("Destruction");
-
-                newElem.InnerText = "Intellect";
-                doc.DocumentElement.AppendChild(newElem);
-
-                // Save the document to a file. White space is
-                // preserved (no white space).
-                doc.PreserveWhitespace = true;
-                doc.Save(saveFile.FileName);
-                
-            }
-
-        }
-
-        private void classToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-              }
-
-        private void classToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-           
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-          
-        }
-
+     
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string classSelection = this.comboBox1.SelectedItem.ToString();
-
         }
     }
 
