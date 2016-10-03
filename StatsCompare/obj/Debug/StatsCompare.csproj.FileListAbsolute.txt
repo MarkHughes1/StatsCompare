@@ -19,3 +19,12 @@ D:\Projects\StatsCompare\StatsCompare\obj\Debug\StatsCompare.Properties.Resource
 D:\Projects\StatsCompare\StatsCompare\obj\Debug\StatsCompare.csproj.GenerateResource.Cache
 D:\Projects\StatsCompare\StatsCompare\bin\Debug\StatsCompare.exe
 D:\Projects\StatsCompare\StatsCompare\bin\Debug\StatsCompare.pdb
+D:\GitProjects\StatsCompare\StatsCompare\bin\Debug\StatsCompare.exe.config
+D:\GitProjects\StatsCompare\StatsCompare\obj\Debug\StatsCompare.exe
+D:\GitProjects\StatsCompare\StatsCompare\obj\Debug\StatsCompare.pdb
+D:\GitProjects\StatsCompare\StatsCompare\bin\Debug\StatsCompare.exe
+D:\GitProjects\StatsCompare\StatsCompare\bin\Debug\StatsCompare.pdb
+D:\GitProjects\StatsCompare\StatsCompare\obj\Debug\StatsCompare.csprojResolveAssemblyReference.cache
+D:\GitProjects\StatsCompare\StatsCompare\obj\Debug\StatsCompare.Form1.resources
+D:\GitProjects\StatsCompare\StatsCompare\obj\Debug\StatsCompare.Properties.Resources.resources
+D:\GitProjects\StatsCompare\StatsCompare\obj\Debug\StatsCompare.csproj.GenerateResource.Cache

@@ -35,7 +35,22 @@ namespace StatsCompare
             var clNodes = doc.SelectNodes("Class");
             foreach (XmlNode ClassNode in clNodes)
             {
-                string ClassName = ClassNode.ChildNodes.ToString();
+                foreach (XmlNode cla in ClassNode)
+                {
+                    string ClassName = cla.Name.ToString();
+                 
+                    this.comboBox1.Items.Add(ClassName);
+
+                   
+                    foreach (XmlNode Spec in cla)
+                    {
+                        string SpecName = Spec.Name.ToString();
+                      
+                        this.comboBox1.Items.Add("-> " + SpecName);
+
+                    }
+
+                }
             }
         }
 
