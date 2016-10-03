@@ -36,12 +36,12 @@ namespace StatsCompare
                 foreach (XmlNode cla in ClassNode)
                 {
                     string ClassName = cla.Name.ToString();
-                    this.comboBox1.Items.Add(ClassName);
+                    this.comboBox1.Items.Add("* " + ClassName + " *");
                     
                     foreach (XmlNode Spec in cla)
                     {
                         string SpecName = Spec.Name.ToString();
-                        this.comboBox1.Items.Add("-> " + SpecName);
+                        this.comboBox1.Items.Add(SpecName);
                     }
                 }
             }
